@@ -38,7 +38,7 @@ export default function Textform(props) {
         </div>
         <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</button>
         <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to Lowercase</button>
-        <button className="btn btn-primary mx-1" onClick={handleClearClick}>Convert to Clearcase</button>
+        <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
     </div>
     <div className="container my-3">
       <h1>Your Text Summary</h1>
@@ -50,3 +50,4 @@ export default function Textform(props) {
     </>
   )
 }
+
