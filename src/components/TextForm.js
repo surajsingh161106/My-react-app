@@ -6,28 +6,32 @@ export default function Textform(props) {
     // console.log("Uppercase was Clicked: " + text); // Only for Check Bugs nothing Alse
     let newText = text.toUpperCase(); 
     setText(newText)
+    props.showAlert("Converted to uppercase!","success");
   }
 
   const handleLoClick = ()=>{
     // console.log("Lowercase was Clicked: " + text); // Only for Check Bugs nothing Alse
     let newText = text.toLowerCase(); 
     setText(newText)
+    props.showAlert("Converted to lowercase!","success");
   }
 
   const handleClearClick = ()=>{
     // console.log("Lowercase was Clicked: " + text); // Only for Check Bugs nothing Alse
     let newText = ''; 
     setText(newText)
+    props.showAlert("Text Cleared!","success");
   }
 
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "))
+    props.showAlert("ExtraSpace Remove!","success");
   }
 
   const handleOnChange = (event)=>{
     // console.log("On Change"); // Only for Check Bugs nothing Alse
-    setText(event.target.value);  
+    setText(event.target.value); 
   }
   
   const [text, setText] = useState('Enter Text Here');
